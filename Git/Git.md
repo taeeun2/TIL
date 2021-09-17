@@ -15,14 +15,28 @@
 **간단한 Unix/Linux 명령어**
 
 - cd com + tap : 자동완성
+
 - ls : 현재 위치의 폴더, 파일 목록 보기
+
 - cd <path> : 현재 위치 이동하기
+
 - cd .. : 상위 폴더로 이동
+
 - mkdir<name> : 폴더 생성하기
+
 - touch<name> : 파일 생성하기
+
 - rm <name> : 파일 삭제하기
+
 - rm -r <name> : 폴더 삭제하기
+
 - clear 
+
+- C:\Users\김태은 = ~(틸다)  : 사용자의 홈
+
+- cd ~ : 홈 디렉토리로 가기
+
+  
 
 **Git 기본기**
 
@@ -153,9 +167,9 @@ git commmit 만 입력시 : esc 누르기+ : + q
 1. git clone https://github.com/taeeun2/clone_repo.git
 2. cd clone_repo/
 3. 파일들 commit
-4. git push origin master
+4. git push 
 
-
+해당 파일을 working page로 : git clone https://github.com/taeeun2/taeeun2.git .
 
 
 
