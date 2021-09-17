@@ -154,7 +154,7 @@ git remote add origin https://github.com/taeeun2/taeeun2.github.io.git
 
 - 소스코드가 아닌 파일 제외
 
-- gitignore.io : 자동으로 필요없는 파일을 제거해주는 .gitignore내용이 들어있음, 복사->.gitignoe파일에 저장
+- [gitignore.io](https://www.toptal.com/developers/gitignore): 자동으로 필요없는 파일을 제거해주는 .gitignore내용이 들어있음, 복사->.gitignoe파일에 저장
 
 - #by taaeun 이렇게 내가 처리해준 내용 따로 저장
 
@@ -178,6 +178,12 @@ git remote add origin https://github.com/taeeun2/taeeun2.github.io.git
 
 ### 팀원
 
+1. GitHub에 가입한 이메일로 오는 초대메일 수락
+2. git clone url.git
+3. 작업
+4. git add, commit
+5. git push origin master
+
 
 
 ## 브랜치(Branch)
@@ -188,7 +194,7 @@ git remote add origin https://github.com/taeeun2/taeeun2.github.io.git
 
 **Branch basic commands**
 
-- git breanck {breanch_name} : 브랜치 생성
+- git branch {breanch_name} : 브랜치 생성
 - git check out  {breanch_name}        :  브랜치 이동
 - git check out -b  {breanch_name}   : 브랜치 생성 및 이동 (1+2)
 - git branch : 브랜치 목록 보여줌
@@ -210,7 +216,7 @@ git remote add origin https://github.com/taeeun2/taeeun2.github.io.git
    - master 별도 변경 없음
    - master branch로 병합
 
-2.  Branch merge
+2.  일반 Branch merge
 
    - 기존 master 브랜치에 변경사항이 있어 병합 커밋 발생
    - feature-a branch로 이동 후 commit
@@ -218,10 +224,6 @@ git remote add origin https://github.com/taeeun2/taeeun2.github.io.git
    - master branch로 병합
 
    
-
-
-
-
 
 1. git clone 주소 .git .
 2. git branch test
@@ -298,11 +300,13 @@ B
 
 A 
 
-1. merge 누르기
+1. merge 수락
 
 
 
-[참고]([Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.](https://hphk.notion.site/hphk/Git-Github-eb889d145316478fb57d0123b698a982))
+[참고1](https://aidenlim-edu.github.io/class-git-advanced/)
+
+[참고2](https://hphk.notion.site/hphk/Git-Github-eb889d145316478fb57d0123b698a982)
 
 aidenlim.dev@gmail.com
 
