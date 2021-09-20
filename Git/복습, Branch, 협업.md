@@ -277,7 +277,7 @@ git remote add origin https://github.com/taeeun2/taeeun2.github.io.git
 
   -> Pull request를 통한 협업이 가능, Github 기반의 오픈소스 참여 과정에서 쓰이는 방식
 
-![fork](C:/Users/%EA%B9%80%ED%83%9C%EC%9D%80/AppData/Roaming/Typora/typora-user-images/image-20210917171422399.png)
+![fork](%EB%B3%B5%EC%8A%B5,%20Branch,%20%ED%98%91%EC%97%85.assets/image-20210917171422399.png)
 
 A
 
