@@ -116,7 +116,64 @@ include, forward시에도 사용
 </html>
 ```
 
+## 내장 객체의 영역
 
+- 내장 객체의 영역은 객체의 유효기간이라고도 불립니다.
+- 즉 해당 객체가 얼마동안이나 살아있는가를 지정해주는 것을 영역이라고 합니다.
+- 영역은 총 4개로 page, request, session, application이 있다.(scope)
+- page : 하나의 jsp 페이지를 처리할 때 사용되는 영역
+- request : 하나의 요청을 처리할 때 사용되는 영역
+- session : 하나의 브라우저와 관련된 영역
+- application : 하나의 웹 애플리케이션과 관련된 영역
+
+## 액션 태그
+
+- 액션 태그는 XML문법을 따릅ㄴ디ㅏ. 즉 시작 태그와 함께 반드시 종료 태그를 포함해야 합니다.
+- 다음은 액션 태그의 기본 형식입니다.
+
+```html
+<jsp: ... 속성 = "값"> 내용 </jsp:>
+```
+
+- 액션 태그에 속성값만 지정하고 내용이 없을 경우에는 xml 규칙에 의해 끝나는 태그를 따로 하지 않고 시작 태그의 마지막 부분을 "/>"로 마무리합니다.
+- 내용이 없는 액션 태그의 형식입니다.
+
+```html
+<jsp : ... 속성="값"/>
+```
+
+1. forward 액션태그
+
+```html
+<jsp:forward> 액션 태그
+<jsp:forward> 태그는 현재 JSP 페이지에서 URL로 지정한 특정 페이지로 넘어갈 때 사용하는 태그입니다.
+형식은 다음과 같습니다.
+    
+[표현]
+<jsp:forward page = "url"/>
+```
+
+2. include 액션 태그
+
+```html
+<jsp :include>액션 태그</jsp>
+- 내용을 기술하는 페이지에서 페이지 상단을 작성하면서 <jsp:include>태그를 사용하여 header.jsp페이지를 포함시키고 페이지 하단을 작성하는 <jsp:include>태그를 사용하여 footer.jsp페이지를 포함시켜서 웹 사이트를 구축
+    
+- 하나의 결과 화면을 모듈별로 개별적인 여러 개의 페이지로 나눠서 작성하는 것을 모듈화라고 한다.
+ex)
+    페이지 상단
+    <jsp:include page="header.jsp"/>
+    
+    페이지 하단
+    <jsp:include page="footer.jsp"/>
+
+```
+
+3. useBean 액션 태그
+4. setProperty 액션 태그
+5. getProperty 액션 태그
+
+- include 차이
 
 # CSS
 
