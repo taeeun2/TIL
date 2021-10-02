@@ -194,12 +194,9 @@ EL에서 지원하는 주요 연산자는 산술 연산자, 논리 연산자, �
 | **${10 >= 11}** | false      |
 | **${10 ge 11}** | false      |
 
- ```jsp
- <%
-     pageContext.setAttribute("title", "EL 연산자");
- %>
- ${empty title}, ${empty title2}
- ```
+* ==(eq), !=(ne), <(lt), >(gt), <=(le), >=(ge)
+
+
 
 ### 조건 연산자
 
@@ -326,36 +323,121 @@ JSTL을 사용할 때에는
 10) ${member.name}<br>
 ```
 
-결과
+- 실행 결과
 
-## c:set 태그
+  ## c:set 태그
 
-### 값 설정 방식
+  ### 값 설정 방식
 
-1) 홍길동
-2) 임꺽정
+  \1) 홍길동
+  \2) 임꺽정
 
-### 기본보관소 - page
+  ### 기본보관소 - page
 
-3) 홍길동
-4) 
+  \3) 홍길동
+  \4) 
 
-### 보관소 지정 - scope 속성
+  ### 보관소 지정 - scope 속성
 
-5) 
-6) 일지매
+  \5) 
+   \6) 일지매
 
-### 기존의 값 덮어씀
+  ### 기존의 값 덮어씀
 
-7) 기존 값 = $ {username4}
-8) 덮어쓴 값 = 주먹대장
+  \7) 기존 값 = $ {username4}
+   \8) 덮어쓴 값 = 주먹대장
 
-### 객체의 프로퍼티 값 변경
+  ### 객체의 프로퍼티 값 변경
 
-9) 홍길동
-10) 임꺽정
+  \9) 홍길동
+  \10) 임꺽정
+  
+  
 
+3. c:if 태그
 
+```jsp
+<h2>c:if 태그</h2>
+<c:if test = "${10>20 }" var = "result1">
+	1) 10은 20보다 크다.<br>
+</c:if>
+2)${result1}<br>
+<c:if test="${10<20 }" var = "result2">
+	3) 10은 20보다 작다.<br>
+</c:if>
+4)${result2}<br>
+```
+
+- 실행 결과
+
+  ## c:if 태그
+
+  2/false
+
+  3/10은 20보다 작다.
+  4/true
+
+3. c:choose 태그
+
+```jsp
+<h2>c:choose 태그</h2>
+<c:set var="userid" value = "admin"/>
+<c:choose>
+	<c:when test = "${userid == 'hong'}">
+		홍길동님 반갑습니다.
+	</c:when>
+	<c:when test = "${userid == 'leem' }">
+		임꺽정님 반갑습니다.
+	</c:when>
+	<c:when test = "${userid == 'admin' }">
+		관리자 전용 페이지입니다.
+	</c:when>
+	<c:otherwise>
+		등록되지 않은 사용자입니다.
+	</c:otherwise>
+</c:choose>
+```
+
+4. c:forEach 태그
+
+```jsp
+<%@ page import = "java.util.*" %>
+
+<h2>c:forEach 태그</h2>
+<h3>반복문 - 배열</h3>
+<% pageContext.setAttribute("nameList", new String[]{"홍길동","임꺽정","일지매"}); %>
+<ul>
+	<c:forEach var = "name"  items =  "${nameList}">
+		<li>${name}</li>
+	</c:forEach>
+</ul>
+<h3>반복문 - 배열의 시작 인덱스와 종료 인덱스 지정</h3>
+<% pageContext.setAttribute("nameList2", new String[]{"홍길동","임꺽정","일지매", "주먹대장","똘이장군"}); %>
+<ul>
+	<c:forEach var = "name"  items =  "${nameList2}" begin = "2" end = "3">
+		<li>${name}</li>
+	</c:forEach>
+</ul>
+<h3>반복문 - ArrayList 과제</h3>
+<%
+	ArrayList<String> nameList3 = new ArrayList<String>();
+	nameList3.add("홍길동");
+	nameList3.add("임꺽정");
+	nameList3.add("일지매");
+	nameList3.add("주먹대장");
+	nameList3.add("똘이장군");
+	pageContext.setAttribute("nameList3",nameList3);
+%>
+<ul>
+	<c:forEach var = "name" items = "${nameList}">
+		<li>${name}</li>
+	</c:forEach>
+</ul>
+<h3>반복문 - 특정 횟수만큼 반복</h3>
+<c:forEach var = "no" begin = "1" end = "6">
+	<li><a href = "Ex${no}.jsp">예제 ${no}</a></li>
+</c:forEach>
+```
 
 
 
