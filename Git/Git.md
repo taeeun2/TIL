@@ -146,19 +146,21 @@ git commmit 만 입력시 : esc 누르기+ : + q
 
 3. Local Repository와 연결
 
-4. git remote add origin https://github.com/taeeun2/remote_repo.git
+4. git init
 
-5. git push -u origin master ( 최초 push 시 -u 작성)
+5. git remote add origin https://github.com/taeeun2/remote_repo.git
 
-6. 로그인
+6. git push -u origin master ( 최초 push 시 -u 작성)
 
-7. git hub로 가서 새로고침
+7. 로그인
 
-8. Repository 지우기 :
+8. git hub로 가서 새로고침
+
+9. Repository 지우기 :
 
    settings -> 제일 밑으로 가서 delete this Repository 클릭
 
-9. 수정 -> git push 
+10. 수정 -> git push 
 
 * origin : 원격 레포지토리(git hub에 저장되어 있음)
 
