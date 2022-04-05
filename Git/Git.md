@@ -173,7 +173,9 @@ git commmit 만 입력시 : esc 누르기+ : + q
 
 해당 파일을 working page로 : git clone https://github.com/taeeun2/taeeun2.git .
 
+## 토큰
 
+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
 
 
 
